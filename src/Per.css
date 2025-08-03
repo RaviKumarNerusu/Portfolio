@@ -1,0 +1,203 @@
+/* Full-Screen Layout & Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff6f61, #6b48ff); /* Attractive gradient: coral to purple */
+  min-height: 100vh;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: #333333; /* Dark gray text */
+}
+
+/* Container */
+.portfolio-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Sections */
+.profile-section,
+.summary-section,
+.certifications-section,
+.internships-section,
+.projects-section,
+.hobbies-section,
+.skills-section {
+  background: #ffffff; /* White background */
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-section:hover,
+.summary-section:hover,
+.certifications-section:hover,
+.internships-section:hover,
+.projects-section:hover,
+.hobbies-section:hover,
+.skills-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #000000; /* Dark professional black border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.name-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #000000; /* Dark professional black text */
+  letter-spacing: 1px;
+}
+
+/* Contact Info */
+.contact-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #4a4a4a; /* Medium gray for text */
+}
+
+.contact-info a {
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed #000000;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: #333333; /* Darker gray on hover */
+}
+
+/* Headings */
+h2 {
+  font-size: 1.8rem;
+  color: #000000; /* Dark professional black */
+  margin-bottom: 15px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 5px;
+}
+
+/* Lists and Paragraphs */
+p,
+.cert-list,
+.intern-list,
+.proj-list,
+.hobbies-list,
+.skills-list {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a; /* Medium gray for text */
+}
+
+.cert-list,
+.intern-list,
+.proj-list,
+.hobbies-list,
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cert-list li,
+.intern-list li,
+.proj-list li,
+.hobbies-list li,
+.skills-list li {
+  margin: 10px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.cert-list li::before,
+.intern-list li::before,
+.proj-list li::before,
+.hobbies-list li::before,
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000; /* Dark professional black bullet */
+  font-weight: 600;
+}
+
+/* Anchor Styling */
+.cert-list a,
+.intern-list a,
+.proj-list a,
+.hobbies-list a,
+.skills-list a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  transition: color 0.2s ease;
+}
+
+.cert-list a:hover,
+.intern-list a:hover,
+.proj-list a:hover,
+.hobbies-list a:hover,
+.skills-list a:hover {
+  color: #333333; /* Darker gray on hover */
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 30px 15px;
+  }
+
+  .name-title {
+    font-size: 2rem;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  .cert-list,
+  .intern-list,
+  .proj-list,
+  .hobbies-list,
+  .skills-list {
+    font-size: 0.95rem;
+  }
+}
